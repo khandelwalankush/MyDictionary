@@ -1,3 +1,5 @@
-export default function Home() {
-  return <></>;
+import { DataDictionaryPageContent } from './data-dictionary-content';
+
+export default function HomePage() {
+  return <DataDictionaryPageContent />;
 }
