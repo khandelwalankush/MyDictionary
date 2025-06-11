@@ -266,6 +266,18 @@ const SidebarTrigger = React.forwardRef<
 >(({ className, onClick, children, asChild, ...restProps }, ref) => {
   const { toggleSidebar } = useSidebar();
 
+  let buttonInternalChildren;
+  if (asChild) {
+    buttonInternalChildren = children;
+  } else {
+    buttonInternalChildren = (
+      <>
+        <PanelLeft />
+        <span className="sr-only">Toggle Sidebar</span>
+      </>
+    );
+  }
+
   return (
     <Button
       ref={ref}
@@ -280,12 +292,7 @@ const SidebarTrigger = React.forwardRef<
       asChild={asChild}
       {...restProps}
     >
-      {asChild && children ? children : (
-        <>
-          <PanelLeft />
-          <span className="sr-only">Toggle Sidebar</span>
-        </>
-      )}
+      {buttonInternalChildren}
     </Button>
   );
 });
@@ -767,3 +774,5 @@ export {
   SidebarTrigger,
   useSidebar,
 }
+
+    
