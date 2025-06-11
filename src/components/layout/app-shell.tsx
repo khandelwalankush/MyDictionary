@@ -1,3 +1,4 @@
+
 "use client";
 
 import * as React from 'react';
@@ -78,7 +79,7 @@ function AppShellLayout({ children }: { children: React.ReactNode }) {
                 const isActive = item.exact ? pathname === item.href : pathname.startsWith(item.href);
                 return (
                   <SidebarMenuItem key={item.href}>
-                    <Link href={item.href} legacyBehavior passHref>
+                    <Link href={item.href}>
                       <SidebarMenuButton
                         className={cn(
                           "w-full justify-start",
@@ -99,7 +100,7 @@ function AppShellLayout({ children }: { children: React.ReactNode }) {
         </SidebarContent>
         <Separator className="bg-sidebar-border" />
         <SidebarFooter className="p-4">
-          <Link href="/settings" legacyBehavior passHref>
+          <Link href="/settings">
              <SidebarMenuButton className="w-full justify-start" tooltip={{ content: "Settings", side: 'right', className: "bg-primary text-primary-foreground" }}>
                 <Settings className="mr-3 h-5 w-5 shrink-0" />
                 <span className="truncate">Settings</span>
