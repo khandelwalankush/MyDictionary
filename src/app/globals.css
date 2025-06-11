@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 94.1%; /* Light Gray #F0F0F0 */
+    --foreground: 240 10% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 271 100% 25.5%; /* Deep Indigo #4B0082 */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    --accent: 180 100% 25.1%; /* Teal #008080 */
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 271 100% 25.5%; /* Primary color for ring */
+
+    --radius: 0.5rem;
+
+    /* Chart colors (can be customized further if needed) */
+    --chart-1: 271 100% 25.5%; /* Primary */
+    --chart-2: 180 100% 25.1%; /* Accent */
+    --chart-3: 240 5.9% 10%; 
+    --chart-4: 0 0% 50%;
+    --chart-5: 240 3.8% 46.1%;
+
+    /* Sidebar specific theme variables */
+    --sidebar-background: 271 100% 15%; /* Darker Indigo variant */
+    --sidebar-foreground: 0 0% 90%; /* Light text for dark background */
+    --sidebar-primary: 180 100% 35%; /* Teal for primary actions in sidebar */
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 180 100% 25.1%; /* Teal for accent */
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 271 100% 20%; /* Slightly lighter border */
+    --sidebar-ring: 180 100% 30%; /* Teal for ring */
+
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 271 100% 35.5%; /* Brighter Indigo for dark mode */
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 180 100% 35.1%; /* Brighter Teal for dark mode */
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 271 100% 35.5%; /* Primary color for ring in dark mode */
+    
+    /* Chart colors for dark mode */
+    --chart-1: 271 100% 35.5%;
+    --chart-2: 180 100% 35.1%;
+    --chart-3: 0 0% 90%;
+    --chart-4: 0 0% 60%;
+    --chart-5: 240 5% 64.9%;
+
+    /* Sidebar specific theme variables for dark mode */
+    --sidebar-background: 240 10% 7%; /* Even darker for dark mode sidebar */
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 180 100% 40%; /* Brighter Teal for primary actions */
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 180 100% 35.1%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 10% 10%;
+    --sidebar-ring: 180 100% 35%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline;
+  }
+  code, pre, kbd, samp {
+    @apply font-code;
+  }
+}
